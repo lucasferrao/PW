@@ -5,32 +5,14 @@ html
         .section
             .containers
                 .container
-                    form(method='POST', action='/submit')
+                    form(method="get" action="/manager/show")
+                        button.button.is-primary(type="submit") Show Managers
 
-                        .field
-                            label.field Name
-                            .control
-                                input.input(name='manager_name', type='text', placeholder='Manager')
+                    form(method="get" action="/manager/create")
+                        button.button.is-primary(type="submit") Create New Manager
 
-                        .field
-                            label.field Email 
-                            .control
-                                input.input(name='email', type='text', placeholder='example@email.com')
+                    form(method="get" action="/manager/update")
+                        button.button.is-primary(type="submit") Update Manager Mobile Number
                         
-                        .field
-                            label.field Mobile Number
-                            .control
-                                input.input(name='mobile_number', type='text', placeholder='9********')
-
-                        .field
-                            label.field NIF
-                            .control
-                                input.input(name='nif', type='text')
-
-                        .field
-                            label.field NIB
-                            .control
-                                input.input(name='nib', type='text')
-
-                        .control
-                            button.button.is-primary Submit
+                    form(method="get" action="/manager/delete")
+                        button.button.is-primary(type="submit") Delete Manager
