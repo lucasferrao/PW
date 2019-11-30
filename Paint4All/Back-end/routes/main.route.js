@@ -29,58 +29,58 @@ router.get('/', function(req, res) {
 
 //Manager routes
  //Manager
-router.get('/Managers/', controllerManager.read);
-router.get('/Managers/:id', controllerManager.readByID);
-router.post('/Managers/', isLoggedIn, controllerManager.save);
-router.put('/Managers/:id', isLoggedIn, isLoggedIn, controllerManager.update);
-router.put('/Managers/del/:id', isLoggedIn, controllerManager.deleteL);
-router.delete('/Managers/:id', isLoggedIn, controllerManager.deleteP);
+router.get('/managers/', controllerManager.read);
+router.get('/managers/:id', controllerManager.readByID);
+router.post('/managers/', isLoggedIn, controllerManager.save);
+router.put('/managers/:id', isLoggedIn, isLoggedIn, controllerManager.update);
+router.put('/managers/del/:id', isLoggedIn, controllerManager.deleteL);
+router.delete('/managers/:id', isLoggedIn, controllerManager.deleteP);
  //Activity
-router.get('/Activities/', controllerActivity.read);
-router.get('/Activities/:id', controllerActivity.readByID);
-router.post('/Activities/', controllerActivity.save);
-router.put('/Activities/:id', controllerActivity.update);
-router.delete('/Activities/:id', controllerActivity.deleteP);
+router.get('/activities/', controllerActivity.read);
+router.get('/activities/:id', controllerActivity.readByID);
+router.post('/activities/', controllerActivity.save);
+router.put('/activities/:id', controllerActivity.update);
+router.delete('/activities/:id', controllerActivity.deleteP);
  //Manager Payment
-router.get('/ManagerPayments/', controllerManagerPayment.read);
-router.get('/ManagerPayments/:id', controllerManagerPayment.readByID);
-router.post('/ManagerPayments/', controllerManagerPayment.save);
+router.get('/managerPayments/', controllerManagerPayment.read);
+router.get('/managerPayments/:id', controllerManagerPayment.readByID);
+router.post('/managerPayments/', controllerManagerPayment.save);
  //Match Event
-router.get('/MatchEvents/', controllerMatchEvent.read);
-router.get('/MatchEvents/:id', controllerMatchEvent.readByID);
-router.post('/MatchEvents/', controllerMatchEvent.save);
-router.put('/MatchEvents/:id', controllerMatchEvent.update);
-router.delete('/MatchEvents/:id', controllerMatchEvent.deleteP);
+router.get('/matchEvents/', controllerMatchEvent.read);
+router.get('/matchEvents/:id', controllerMatchEvent.readByID);
+router.post('/matchEvents/', controllerMatchEvent.save);
+router.put('/matchEvents/:id', controllerMatchEvent.update);
+router.delete('/matchEvents/:id', controllerMatchEvent.deleteP);
  //Space Activity
-router.get('/SpaceActivities/', controllerSpaceActivity.read);
-router.get('/SpaceActivities/:id', controllerSpaceActivity.readByID);
-router.post('/SpaceActivities/', controllerSpaceActivity.save);
-router.put('/SpaceActivities/:id', controllerSpaceActivity.update);
-router.put('/SpaceActivities/del/:id', controllerSpaceActivity.deleteL);
-router.delete('/SpaceActivities/:id', controllerSpaceActivity.deleteP);
+router.get('/spaceActivities/', controllerSpaceActivity.read);
+router.get('/spaceActivities/:id', controllerSpaceActivity.readByID);
+router.post('/spaceActivities/', controllerSpaceActivity.save);
+router.put('/spaceActivities/:id', controllerSpaceActivity.update);
+router.put('/spaceActivities/del/:id', controllerSpaceActivity.deleteL);
+router.delete('/spaceActivities/:id', controllerSpaceActivity.deleteP);
  //Space Manager
-router.get('/SpaceManagers/', controllerSpaceManager.read);
-router.get('/SpaceManagers/:id', controllerSpaceManager.readByID);
-router.put('/SpaceManagers/del/:id', controllerSpaceManager.deleteP);
+router.get('/spaceManagers/', controllerSpaceManager.read);
+router.get('/spaceManagers/:id', controllerSpaceManager.readByID);
+router.put('/spaceManagers/del/:id', controllerSpaceManager.deleteP);
  //Space Sponsor
-router.get('/SpaceSponsors/', controllerSpaceSponsor.read);
-router.post('/SpaceSponsors/', controllerSpaceSponsor.save);
-router.put('/SpaceSponsors/:id', controllerSpaceSponsor.update);
-router.delete('/SpaceSponsors/:id', controllerSpaceSponsor.deleteP);
+router.get('/spaceSponsors/', controllerSpaceSponsor.read);
+router.post('/spaceSponsors/', controllerSpaceSponsor.save);
+router.put('/spaceSponsors/:id', controllerSpaceSponsor.update);
+router.delete('/spaceSponsors/:id', controllerSpaceSponsor.deleteP);
  //Space 
-router.get('/Spaces/', controllerSpace.read);
-router.get('/Spaces/:id', controllerSpace.readByID);
-router.post('/Spaces/', controllerSpace.save);
-router.put('/Spaces/:id', controllerSpace.update);
-router.put('/Spaces/del/:id', controllerSpace.deleteL);
-router.delete('/Spaces/:id', controllerSpace.deleteP);
+router.get('/spaces/', controllerSpace.read);
+router.get('/spaces/:id', controllerSpace.readByID);
+router.post('/spaces/', controllerSpace.save);
+router.put('/spaces/:id', controllerSpace.update);
+router.put('/spaces/del/:id', controllerSpace.deleteL);
+router.delete('/spaces/:id', controllerSpace.deleteP);
  //Sponsor
-router.get('/Sponsors/', controllerSponsor.read);
-router.get('/Sponsors/:id', controllerSponsor.readByID);
-router.post('/Sponsors/', controllerSponsor.save);
-router.put('/Sponsors/:id', controllerSponsor.update);
-router.put('/Sponsors/del/:id', controllerSponsor.deleteL);
-router.delete('/Sponsors/:id', controllerSponsor.deleteP);
+router.get('/sponsors/', controllerSponsor.read);
+router.get('/sponsors/:id', controllerSponsor.readByID);
+router.post('/sponsors/', controllerSponsor.save);
+router.put('/sponsors/:id', controllerSponsor.update);
+router.put('/sponsors/del/:id', controllerSponsor.deleteL);
+router.delete('/sponsors/:id', controllerSponsor.deleteP);
 
 module.exports = router;
 

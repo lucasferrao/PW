@@ -1,9 +1,10 @@
-const jsonMessagesPath = __dirname + "/../assets/jsonMessages/";
+const jsonMessagesPath = __dirname + "../assets/jsonMessages/";
 const jsonMessages = require(jsonMessagesPath + "bd");
 const connect = require('../config/connectMySQL');
 
 //Create & execute a read query from database (GET)
 function read(req, res) {
+    console.log("olá");
     const query = connect.con.query('SELECT id_manager, mobile_number, nif, nib, is_active FROM manager ORDER BY id_manager desc', function(err, rows, fields) {
         console.log(query.sql);
         if (err) {
@@ -47,6 +48,8 @@ function save(req, res) {
     const mobile_number = req.sanitize('mobile_number').escape();
     const nif = req.sanitize('nif').escape();
     const nib = req.sanitize('nib').escape();
+    var query = "";
+    console.log("Estou aqui!");
     //Validations
     req.checkBody("mobile_number", "Insira apenas números.").matches(/^[0-9]+$/i);
     req.checkBody("nif", "Insira apenas números.").matches(/^[0-9]+$/i);
@@ -58,14 +61,17 @@ function save(req, res) {
     }
     else {
         if (mobile_number != "NULL" && nif != "NULL" && nib != "NULL") {
-            const post = { 
-                mobile_number: mobile_number, nif: nif, nib: nib
+            var post = { 
+                mobile_number: mobile_number, 
+                nif: nif, 
+                nib: nib
             };
             //Create & Execute a query on database to insert present data from post
-            const query = connect.con.query('INSERT INTO manager SET ?', post, function(err, rows, fields) {
+            query = connect.con.query('INSERT INTO manager SET ?', post, function(err, rows, fields) {
                 console.log(query.sql);
                 if (!err) {
                     res.status(jsonMessages.db.successInsert.status).location(rows.insertId).send(jsonMessages.db.successInsert);
+                    console.log("Message: 1 record inserted!");
                 }
                 else {
                     console.log(err);
@@ -73,9 +79,9 @@ function save(req, res) {
                 }
             });
         }
-        else
+        else 
             res.status(jsonMessages.db.requiredData.status).send(jsonMessages.db.requiredData);
-    }
+    };
 }
 
 

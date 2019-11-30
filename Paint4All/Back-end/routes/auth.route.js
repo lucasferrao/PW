@@ -1,3 +1,4 @@
+/*
 //Authentication routes
 const authController = require('../controllers/auth.controller.js');
 module.exports = function(app, passport) {
@@ -24,3 +25,4 @@ module.exports = function(app, passport) {
         res.redirect('/signin');
     }
 };
+*/
