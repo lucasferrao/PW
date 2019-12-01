@@ -1,4 +1,4 @@
-const jsonMessagesPath = __dirname + "/../assets/jsonMessages/";
+const jsonMessagesPath = "../assets/jsonMessages/";
 const jsonMessages = require(jsonMessagesPath + "bd");
 const connect = require('../config/connectMySQL');
 

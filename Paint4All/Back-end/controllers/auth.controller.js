@@ -1,4 +1,4 @@
-const jsonMessagesPath = __dirname + "/../assets/jsonMessages/";
+const jsonMessagesPath = "../assets/jsonMessages/";
 const jsonMessages = require(jsonMessagesPath + "login");
 var exports = module.exports = {};
 

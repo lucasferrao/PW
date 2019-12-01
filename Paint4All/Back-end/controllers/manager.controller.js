@@ -1,10 +1,12 @@
-const jsonMessagesPath = __dirname + "../assets/jsonMessages/";
+console.log("olá2");
+
+const jsonMessagesPath = "../assets/jsonMessages/";
 const jsonMessages = require(jsonMessagesPath + "bd");
 const connect = require('../config/connectMySQL');
 
 //Create & execute a read query from database (GET)
 function read(req, res) {
-    console.log("olá");
+    console.log("olá3");
     const query = connect.con.query('SELECT id_manager, mobile_number, nif, nib, is_active FROM manager ORDER BY id_manager desc', function(err, rows, fields) {
         console.log(query.sql);
         if (err) {

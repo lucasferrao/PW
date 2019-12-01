@@ -1,6 +1,8 @@
 //Application routes
-//Router require
-const router = require('express').Router();
+console.log("olá");
+const app = require('../server');
+//app require
+//const router = require('express').app();
 //Evoke all needed controllers
 const controllerManager = 
     require('../controllers/manager.controller.js');
@@ -22,67 +24,67 @@ const controllerSponsor =
     require('../controllers/sponsor.controller.js');
 
 //Default route
-router.get('/', function(req, res) {
+app.get('/', function(req, res) {
     res.send("New Paint4All");
     res.end();
 });
 
 //Manager routes
  //Manager
-router.get('/managers/', controllerManager.read);
-router.get('/managers/:id', controllerManager.readByID);
-router.post('/managers/', isLoggedIn, controllerManager.save);
-router.put('/managers/:id', isLoggedIn, isLoggedIn, controllerManager.update);
-router.put('/managers/del/:id', isLoggedIn, controllerManager.deleteL);
-router.delete('/managers/:id', isLoggedIn, controllerManager.deleteP);
+app.get('/managers/', controllerManager.read);
+app.get('/managers/:id', controllerManager.readByID);
+app.post('/managers/', isLoggedIn, controllerManager.save);
+app.put('/managers/:id', isLoggedIn, isLoggedIn, controllerManager.update);
+app.put('/managers/del/:id', isLoggedIn, controllerManager.deleteL);
+app.delete('/managers/:id', isLoggedIn, controllerManager.deleteP);
  //Activity
-router.get('/activities/', controllerActivity.read);
-router.get('/activities/:id', controllerActivity.readByID);
-router.post('/activities/', controllerActivity.save);
-router.put('/activities/:id', controllerActivity.update);
-router.delete('/activities/:id', controllerActivity.deleteP);
+app.get('/activities/', controllerActivity.read);
+app.get('/activities/:id', controllerActivity.readByID);
+app.post('/activities/', controllerActivity.save);
+app.put('/activities/:id', controllerActivity.update);
+app.delete('/activities/:id', controllerActivity.deleteP);
  //Manager Payment
-router.get('/managerPayments/', controllerManagerPayment.read);
-router.get('/managerPayments/:id', controllerManagerPayment.readByID);
-router.post('/managerPayments/', controllerManagerPayment.save);
+app.get('/managerPayments/', controllerManagerPayment.read);
+app.get('/managerPayments/:id', controllerManagerPayment.readByID);
+app.post('/managerPayments/', controllerManagerPayment.save);
  //Match Event
-router.get('/matchEvents/', controllerMatchEvent.read);
-router.get('/matchEvents/:id', controllerMatchEvent.readByID);
-router.post('/matchEvents/', controllerMatchEvent.save);
-router.put('/matchEvents/:id', controllerMatchEvent.update);
-router.delete('/matchEvents/:id', controllerMatchEvent.deleteP);
+app.get('/matchEvents/', controllerMatchEvent.read);
+app.get('/matchEvents/:id', controllerMatchEvent.readByID);
+app.post('/matchEvents/', controllerMatchEvent.save);
+app.put('/matchEvents/:id', controllerMatchEvent.update);
+app.delete('/matchEvents/:id', controllerMatchEvent.deleteP);
  //Space Activity
-router.get('/spaceActivities/', controllerSpaceActivity.read);
-router.get('/spaceActivities/:id', controllerSpaceActivity.readByID);
-router.post('/spaceActivities/', controllerSpaceActivity.save);
-router.put('/spaceActivities/:id', controllerSpaceActivity.update);
-router.put('/spaceActivities/del/:id', controllerSpaceActivity.deleteL);
-router.delete('/spaceActivities/:id', controllerSpaceActivity.deleteP);
+app.get('/spaceActivities/', controllerSpaceActivity.read);
+app.get('/spaceActivities/:id', controllerSpaceActivity.readByID);
+app.post('/spaceActivities/', controllerSpaceActivity.save);
+app.put('/spaceActivities/:id', controllerSpaceActivity.update);
+app.put('/spaceActivities/del/:id', controllerSpaceActivity.deleteL);
+app.delete('/spaceActivities/:id', controllerSpaceActivity.deleteP);
  //Space Manager
-router.get('/spaceManagers/', controllerSpaceManager.read);
-router.get('/spaceManagers/:id', controllerSpaceManager.readByID);
-router.put('/spaceManagers/del/:id', controllerSpaceManager.deleteP);
+app.get('/spaceManagers/', controllerSpaceManager.read);
+app.get('/spaceManagers/:id', controllerSpaceManager.readByID);
+app.put('/spaceManagers/del/:id', controllerSpaceManager.deleteP);
  //Space Sponsor
-router.get('/spaceSponsors/', controllerSpaceSponsor.read);
-router.post('/spaceSponsors/', controllerSpaceSponsor.save);
-router.put('/spaceSponsors/:id', controllerSpaceSponsor.update);
-router.delete('/spaceSponsors/:id', controllerSpaceSponsor.deleteP);
+app.get('/spaceSponsors/', controllerSpaceSponsor.read);
+app.post('/spaceSponsors/', controllerSpaceSponsor.save);
+app.put('/spaceSponsors/:id', controllerSpaceSponsor.update);
+app.delete('/spaceSponsors/:id', controllerSpaceSponsor.deleteP);
  //Space 
-router.get('/spaces/', controllerSpace.read);
-router.get('/spaces/:id', controllerSpace.readByID);
-router.post('/spaces/', controllerSpace.save);
-router.put('/spaces/:id', controllerSpace.update);
-router.put('/spaces/del/:id', controllerSpace.deleteL);
-router.delete('/spaces/:id', controllerSpace.deleteP);
+app.get('/spaces/', controllerSpace.read);
+app.get('/spaces/:id', controllerSpace.readByID);
+app.post('/spaces/', controllerSpace.save);
+app.put('/spaces/:id', controllerSpace.update);
+app.put('/spaces/del/:id', controllerSpace.deleteL);
+app.delete('/spaces/:id', controllerSpace.deleteP);
  //Sponsor
-router.get('/sponsors/', controllerSponsor.read);
-router.get('/sponsors/:id', controllerSponsor.readByID);
-router.post('/sponsors/', controllerSponsor.save);
-router.put('/sponsors/:id', controllerSponsor.update);
-router.put('/sponsors/del/:id', controllerSponsor.deleteL);
-router.delete('/sponsors/:id', controllerSponsor.deleteP);
+app.get('/sponsors/', controllerSponsor.read);
+app.get('/sponsors/:id', controllerSponsor.readByID);
+app.post('/sponsors/', controllerSponsor.save);
+app.put('/sponsors/:id', controllerSponsor.update);
+app.put('/sponsors/del/:id', controllerSponsor.deleteL);
+app.delete('/sponsors/:id', controllerSponsor.deleteP);
 
-module.exports = router;
+module.exports = app;
 
 //Verify if a user is logged in
 function isLoggedIn(req, res, next) {
