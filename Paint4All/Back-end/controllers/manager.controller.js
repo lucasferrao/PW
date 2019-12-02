@@ -47,11 +47,12 @@ function readByID(req, res) {
 
 //Register of a new manager (POST)
 function save(req, res) {
+    console.log("Estou aqui!");
     const mobile_number = req.sanitize('mobile_number').escape();
     const nif = req.sanitize('nif').escape();
     const nib = req.sanitize('nib').escape();
     var query = "";
-    console.log("Estou aqui!");
+    console.log("Estou aqui!222");
     //Validations
     req.checkBody("mobile_number", "Insira apenas números.").matches(/^[0-9]+$/i);
     req.checkBody("nif", "Insira apenas números.").matches(/^[0-9]+$/i);

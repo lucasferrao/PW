@@ -1,17 +1,14 @@
 const host = '127.0.0.1';
 const port = 8080;
-/*
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 8000;
-}
-app.listen(port);
-*/
 
 //Configure the server
 const express = require('express'); //express: routing
 const app = express();
 const cors = require("cors");
+const expressValidator = require('express-validator');
+app.use(expressValidator());
+const expressSanitizer = require('express-sanitizer');
+app.use(expressSanitizer());
 const cookieParser = require('cookie-parser');
 app.use(cors());
 app.use(cors({

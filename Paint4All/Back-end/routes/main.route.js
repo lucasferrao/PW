@@ -2,7 +2,6 @@
 console.log("olá");
 const app = require('../server');
 //app require
-//const router = require('express').app();
 //Evoke all needed controllers
 const controllerManager = 
     require('../controllers/manager.controller.js');
@@ -25,7 +24,7 @@ const controllerSponsor =
 
 //Default route
 app.get('/', function(req, res) {
-    res.send("New Paint4All");
+    res.send("Paint4All");
     res.end();
 });
 
@@ -33,7 +32,7 @@ app.get('/', function(req, res) {
  //Manager
 app.get('/managers/', controllerManager.read);
 app.get('/managers/:id', controllerManager.readByID);
-app.post('/managers/', isLoggedIn, controllerManager.save);
+app.post('/managers/',/* isLoggedIn,*/ controllerManager.save);
 app.put('/managers/:id', isLoggedIn, isLoggedIn, controllerManager.update);
 app.put('/managers/del/:id', isLoggedIn, controllerManager.deleteL);
 app.delete('/managers/:id', isLoggedIn, controllerManager.deleteP);
