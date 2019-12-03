@@ -1,7 +1,8 @@
+const server = 'http://localhost:8080/activities/';
 window.onload = function () 
 {
     alert("pagina carregada com sucesso!!")
-    refreshAtividades();
+    refreshActivities();
     validator();
     document.getElementById("formuser").onsubmit= function(e){
         //validaçao do formulario ao submeter
@@ -21,7 +22,7 @@ function validator()
             //se validar() for valido, res retorna true e executa o saveUsers
             if (res)
             {
-                saveAtividades();
+                saveActivities();
             }
         },
             {
@@ -51,7 +52,7 @@ function validator()
 
 
 // funcao de gravaçao
-function saveAtividades() 
+function saveActivities() 
 { 
     //data é uma variavel para um array, e quer armazenar os dados na data (array) 
     var data = {}; 
@@ -65,7 +66,7 @@ function saveAtividades()
 
 
     //chamada fetch para envio dos dados para o servidor via POST   
-    fetch('localhost:8080/Activities/', 
+    fetch(server, 
     { 
         //cabecalho
         headers: 
@@ -99,7 +100,7 @@ function saveAtividades()
         { 
             document.getElementById("formuser").reset(); //limpeza dos dados do form 
             alert("submitted with success"); 
-            refreshAtividades(); 
+            refreshActivities(); 
         } 
     }).then(function (result) 
     {
@@ -114,12 +115,12 @@ function saveAtividades()
 
 
 
-function refreshAtividades() {
+function refreshActivities() {
     async function fetchAsync() {
-    const renderAtividades = document.getElementById("result");
+    const renderActivities = document.getElementById("result");
     let txt = "";
-    const response = await fetch('localhost:8080/Activities/',);
-    const atividades = await response.json();
+    const response = await fetch(server,);
+    const activities = await response.json();
     
 
     //criação de uma tabela para demonstração dos resultados recebidos
@@ -130,13 +131,13 @@ function refreshAtividades() {
     
     //criação de uma tab
     //percorrer a variável atividades e por cada atividade cria a linha da tabela com os dados presentes
-    for (const atividade of atividades) {
+    for (const activity of activities) {
     txt += "<tr><td style='text-align:right'>" + user.name + "</td><td>" + user.email + "</td><td>" +
     user.dateReg + "</td></tr>";
     }
     txt += "</tbody></table>";
     //envia a tabela construida para a view e mostra no object com ID result
-    renderAtividades.innerHTML = txt;
+    renderActivities.innerHTML = txt;
     }
     //chama a função fetchAsync()
     fetchAsync().then(data => console.log("ok")).catch(reason => console.log(reason.message));

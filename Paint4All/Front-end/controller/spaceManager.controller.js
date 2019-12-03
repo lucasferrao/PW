@@ -1,7 +1,8 @@
+const server = 'http://localhost:8080/spaceManagers/';
 window.onload = function () 
 {
     alert("pagina carregada com sucesso!!")
-    refreshEspacoGestores();
+    refreshSpaceManagers();
     validator();
     document.getElementById("formuser").onsubmit= function(e){
         //validaçao do formulario ao submeter
@@ -21,7 +22,7 @@ function validator()
             //se validar() for valido, res retorna true e executa o saveUsers
             if (res)
             {
-                saveEspacoGestores();
+                saveSpaceManagers();
             }
         },
             {
@@ -49,7 +50,7 @@ function validator()
 
 
 // funcao de gravaçao
-function saveEspacoGestores() 
+function saveSpaceManagers() 
 { 
     //data é uma variavel para um array, e quer armazenar os dados na data (array) 
     var data = {}; 
@@ -63,7 +64,7 @@ function saveEspacoGestores()
 
 
     //chamada fetch para envio dos dados para o servior via POST   
-    fetch('localhost:8080/SpaceManagers/', 
+    fetch(server, 
     { 
         //cabecalho
         headers: 
@@ -97,7 +98,7 @@ function saveEspacoGestores()
         { 
             document.getElementById("formuser").reset(); //limpeza dos dados do form 
             alert("submitted with success"); 
-            refreshEspacoGestores(); 
+            refreshSpaceManagers(); 
         } 
     }).then(function (result) 
     {
@@ -112,24 +113,24 @@ function saveEspacoGestores()
 
 
 
-function refreshEspacoGestores() {
+function refreshSpaceManagers() {
     async function fetchAsync() {
-    const renderEspacoGestores = document.getElementById("result");
+    const renderSpaceManagers = document.getElementById("result");
     let txt = "";
-    const response = await fetch('localhost:8080/SpaceManagers/',);
-    const EspacoGestores = await response.json();
+    const response = await fetch(server,);
+    const spaceManagers = await response.json();
     //criação de uma tabela para demonstração dos resultados recebidos
     txt += "<table class='table' style='padding:10px; width:70%; margin:0% 15% 0% 15%'>";
     txt += "<thead style='background-color:#607d8b; color:white '>";
     txt += "<tr><th>Name</th><th>localizacao</th><th>avaliacao</th><th>ultima_reserva</th><th></tr></thead><tbody>";
     //percorrer a variável EspacoGestores e por cada EspacoGestor cria a linha da tabela com os dados presentes
-    for (const EspacoGestor of EspacoGestores) {
+    for (const spaceManager of spaceManagers) {
     txt += "<tr><td style='text-align:right'>" + user.name + "</td><td>" + user.email + "</td><td>" +
     user.dateReg + "</td></tr>";
     }
     txt += "</tbody></table>";
     //envia a tabela construida para a view e mostra no object com ID result
-    renderEspacoGestores.innerHTML = txt;
+    renderSpaceManagers.innerHTML = txt;
     }
     //chama a função fetchAsync()
     fetchAsync().then(data => console.log("ok")).catch(reason => console.log(reason.message));

@@ -1,7 +1,7 @@
 //Application routes
 console.log("olá");
-const app = require('../server');
 //app require
+const app = require('../server');
 //Evoke all needed controllers
 const controllerManager = 
     require('../controllers/manager.controller.js');
@@ -32,7 +32,7 @@ app.get('/', function(req, res) {
  //Manager
 app.get('/managers/', controllerManager.read);
 app.get('/managers/:id', controllerManager.readByID);
-app.post('/managers/',/* isLoggedIn,*/ controllerManager.save);
+app.post('/managers/', isLoggedIn, controllerManager.save);
 app.put('/managers/:id', isLoggedIn, isLoggedIn, controllerManager.update);
 app.put('/managers/del/:id', isLoggedIn, controllerManager.deleteL);
 app.delete('/managers/:id', isLoggedIn, controllerManager.deleteP);

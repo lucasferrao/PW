@@ -1,7 +1,8 @@
+const server = 'http://localhost:8080/managerPayments/';
 window.onload = function () 
 {
     alert("pagina carregada com sucesso!!")
-    refreshPagamentoGestores();
+    refreshManagerPayments();
     validator();
     document.getElementById("formuser").onsubmit= function(e){
         //validaçao do formulario ao submeter
@@ -21,7 +22,7 @@ function validator()
             //se validar() for valido, res retorna true e executa o saveUsers
             if (res)
             {
-                savePagamentoGestores();
+                saveManagerPayments();
             }
         },
             {
@@ -51,7 +52,7 @@ function validator()
 
 
 // funcao de gravaçao
-function savePagamentoGestores() 
+function saveManagerPayments() 
 { 
     //data é uma variavel para um array, e quer armazenar os dados na data (array) 
     var data = {}; 
@@ -65,7 +66,7 @@ function savePagamentoGestores()
 
 
     //chamada fetch para envio dos dados para o servidor via POST   
-    fetch('localhost:8080/ManagerPayments/', 
+    fetch(server, 
     { 
         //cabecalho
         headers: 
@@ -99,7 +100,7 @@ function savePagamentoGestores()
         { 
             document.getElementById("formuser").reset(); //limpeza dos dados do form 
             alert("submitted with success"); 
-            refreshEspacos(); 
+            refreshManagerPayments(); 
         } 
     }).then(function (result) 
     {
@@ -114,12 +115,12 @@ function savePagamentoGestores()
 
 
 
-function refreshPagamentoGestores() {
+function refreshManagerPayments() {
     async function fetchAsync() {
-    const renderPagamentoGestores = document.getElementById("result");
+    const renderManagerPayments = document.getElementById("result");
     let txt = "";
-    const response = await fetch('localhost:8080/ManagerPayments/',);
-    const pagamentogestores = await response.json();
+    const response = await fetch(server,);
+    const managerPayments = await response.json();
     
     //criação de uma tabela para demonstração dos resultados recebidos
     txt += "<table class='table' style='padding:10px; width:70%; margin:0% 15% 0% 15%'>";
@@ -127,7 +128,7 @@ function refreshPagamentoGestores() {
     txt += "<tr><th>Name</th><th>Email</th><th>Reg. Date</th></tr></thead><tbody>";
     
     //percorrer a variável pagamentogestor e por cada pagamentogestor cria a linha da tabela com os dados presentes
-    for (const pagamentogestor of pagamentogestores) {
+    for (const managerPayment of managerPayments) {
     txt += "<tr><td style='text-align:right'>" + user.name + "</td><td>" + user.email + "</td><td>" +
     user.dateReg + "</td></tr>";
     }

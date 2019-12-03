@@ -169,7 +169,7 @@
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Espaço</h1>
-            <a data-toggle="modal" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-target="#exampleModal"><i class="fas fa-download fa-sm text-white-50"></i> Editar Espaço</a>       
+            <a data-toggle="modal" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-target="#exampleModal"><i class="text-white-50"></i> Editar Espaço</a>       
           </div>
 
            <!-- Modal -->
@@ -183,7 +183,7 @@
           </button>
         </div>
         <div class="modal-body">
-            <form class="user">
+            <form class="user" id="formuser" name="formuser"> 
                 <div class="form-group">
                   <input type="text" class="form-control form-control-user" id="nome" placeholder="Nome">
                 </div>
@@ -214,12 +214,8 @@
       </div>
     </div>
   
-          <!-- Content Row -->
-
-          <div class="row">
-
             <!-- Area Chart -->
-            <div class="col-xl-8 col-lg-7">
+            <div class="col-xl-6 col-lg-7">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -245,18 +241,9 @@
               </div>
             </div>
 
-            <!-- Descrição do Local -->
-            <div class="card shadow mb-6">
-                <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Descrição do Local:</h6>
-                </div>
-                <div class="card-body">
-                  <p>Descrição do Site</p>
-                  <p class="mb-0">.</p>
-                </div>
-              </div>
+            
             <!-- Faturação Chart -->
-            <div class="col-xl-8 col-lg-7">
+            <div class="col-xl-6 col-lg-7">
                 <div class="card shadow mb-4">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -282,8 +269,8 @@
                 </div>
               </div>
 
-              <!-- Dias mais visitados -->
-            <div class="col-xl-8 col-lg-7">
+            <!-- Dias mais visitados -->
+            <div class="col-xl-6 col-lg-7">
                 <div class="card shadow mb-4">
                   <!-- Card Header - Dropdown -->
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -310,99 +297,119 @@
                 </div>
               </div>
             
-          <!-- Content Row -->
-          <div class="row">
+          
 
-            <!-- Content Column -->
-            <div class="collapse-inner">
-
-              <!-- Material Disponivel -->
-              <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                <h6 class="m-0 font-weight-bold text-primary">Material Disponivel</h6>
-                <div class="dropdown no-arrow">
-                  <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                    <div class="dropdown-header">Material:</div>
-                    <a class="dropdown-item" data-toggle="modal" data-target="#materialModal">Alterar</a>
+              <!-- Descrição do Local -->
+              <div class="col-xl-6 col-lg-7">
+                <div class="card shadow mb-4">
+                  <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Descrição do Local:</h6>
+                  </div>
+                <div class="card-body">
+                  <p>Descrição do Site</p>
+                  <p class="mb-0">.</p>
+                </div>
+                <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                    <div class="dropdown-header">Reservas:</div>
+                    <a class="dropdown-item" href="#">Estatísticas</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Atualizar</a>
                   </div>
-                </div>
               </div>
-                <div class="card-body">
-                    <form class="user">
-                        <div class="form-group">
-                           <label for="balas" >Balas:</label><br> 
-                           <input type="number" class="form-control form-control-user" name="balas" id="balas" value="700" disabled>
-                         </div> 
-                         <div class="form-group">
-                           <label for="fatos" >Fato Macaco:</label><br> 
-                           <input type="number" class="form-control form-control-user" name="fatos" id="fatos" value="400" disabled>
-                         </div> 
-                         <div class="form-group">
-                           <label for="mascaras" >Mascaras:</label><br> 
-                           <input type="number" class="form-control form-control-user" name="mascaras" id="mascaras" value="300" disabled>
-                         </div> 
-                         <div class="form-group">
-                           <label for="marcadores" >Marcadores:</label><br> 
-                           <input type="number" class="form-control form-control-user" name="marcadores" id="marcadores" value=1000 disabled >
-                         </div>
-                       <hr>
-                     </form>
-              </div>
+               <!-- Content Row -->
+          <div class="row">
 
-            <div class="col-lg-6 mb-4">
-            
-              <!--Alterar material-->
-        <div class="modal fade" id="materialModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Editar Material Disponível</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                  </button>
-            </div>
-      <div class="modal-body">
-                <form class="user">
-                  <div class="form-group">
-                     <label for="balas" >Balas:</label><br> 
-                     <input type="number" class="form-control form-control-user" name="balas" id="balas" >
-                   </div> 
-                   <div class="form-group">
-                     <label for="fatos" >Fato Macaco:</label><br> 
-                     <input type="number" class="form-control form-control-user" name="fatos" id="fatos" disabled>
-                   </div> 
-                   <div class="form-group">
-                     <label for="mascaras" >Mascaras:</label><br> 
-                     <input type="number" class="form-control form-control-user" name="mascaras" id="mascaras" disabled>
-                   </div> 
-                   <div class="form-group">
-                     <label for="marcadores" >Marcadores:</label><br> 
-                     <input type="number" class="form-control form-control-user" name="marcadores" id="marcadores" disabled >
-                   </div>
-                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                    <button type="button" class="btn btn-primary" data-target="managerprofile.html">Guardar</button>
+              <!-- Content Column -->
+              <div class="collapse-inner">
+              
+                <!-- Material Disponivel -->
+                <div class=" col-xl-6 col-lg-6 mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Material Disponivel</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Material:</div>
+                      <a class="dropdown-item" data-toggle="modal" data-target="#materialModal">Alterar</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Atualizar</a>
+                    </div>
                   </div>
-                 <hr>
-               </form>
+                </div>
+                  <div class="card-body">
+                      <form class="user">
+                          <div class="form-group">
+                             <label for="balas" >Balas:</label><br> 
+                             <input type="number" class="form-control form-control-user" name="balas" id="balas" value="1200" disabled>
+                           </div> 
+                           <div class="form-group">
+                             <label for="fatos" >Fato Macaco:</label><br> 
+                             <input type="number" class="form-control form-control-user" name="fatos" id="fatos" value="400" disabled>
+                           </div> 
+                           <div class="form-group">
+                             <label for="mascaras" >Mascaras:</label><br> 
+                             <input type="number" class="form-control form-control-user" name="mascaras" id="mascaras" value="300" disabled>
+                           </div> 
+                           <div class="form-group">
+                             <label for="marcadores" >Marcadores:</label><br> 
+                             <input type="number" class="form-control form-control-user" name="marcadores" id="marcadores" value=1000 disabled >
+                           </div>
+                         <hr>
+                       </form>
                 </div>
               </div>
+              <div class="col-lg-6 mb-4">
+              
+                <!--Alterar material-->
+          <div class="modal fade" id="materialModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Material Disponível</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+              </div>
+        <div class="modal-body">
+                  <form class="user">
+                    <div class="form-group">
+                       <label for="balas" >Balas:</label><br> 
+                       <input type="number" class="form-control form-control-user" name="balas" id="balas" >
+                     </div> 
+                     <div class="form-group">
+                       <label for="fatos" >Fato Macaco:</label><br> 
+                       <input type="number" class="form-control form-control-user" name="fatos" id="fatos">
+                     </div> 
+                     <div class="form-group">
+                       <label for="mascaras" >Mascaras:</label><br> 
+                       <input type="number" class="form-control form-control-user" name="mascaras" id="mascaras">
+                     </div> 
+                     <div class="form-group">
+                       <label for="marcadores" >Marcadores:</label><br> 
+                       <input type="number" class="form-control form-control-user" name="marcadores" id="marcadores">
+                     </div>
+                     <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                      <button type="button" class="btn btn-primary" data-target="managerprofile.html">Guardar</button>
+                    </div>
+                   <hr>
+                 </form>
+                  </div>
+                </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-   
-
+     
+  
+              </div>
             </div>
+  
           </div>
 
-        </div>
-        <!-- /.container-fluid -->
-
+              
       </div>
       <!-- End of Main Content -->
 

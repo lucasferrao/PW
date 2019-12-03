@@ -1,5 +1,4 @@
-const host = '127.0.0.1';
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 //Configure the server
 const express = require('express'); //express: routing
@@ -22,7 +21,7 @@ app.use('/views', express.static('views'));
 //App running on localhost:8080 || 127.0.0.1:8080
 app.listen(port, function(err){
   if (!err) {
-    console.log("Your app is listening on " + host + " and port " + port + ".");
+    console.log("Your app is listening on port " + port + ".");
   } else {
     console.log(err);
   }

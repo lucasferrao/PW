@@ -1,7 +1,8 @@
+const server = 'http://localhost:8080/spaces/';
 window.onload = function () 
 {
     alert("pagina carregada com sucesso!!")
-    refreshEspacos();
+    refreshSpaces();
     validator();
     document.getElementById("formuser").onsubmit= function(e){
         //validaçao do formulario ao submeter
@@ -21,7 +22,7 @@ function validator()
             //se validar() for valido, res retorna true e executa o saveUsers
             if (res)
             {
-                saveEspacos();
+                saveSpaces();
             }
         },
             {
@@ -51,7 +52,7 @@ function validator()
 
 
 // funcao de gravaçao
-function saveEspacos() 
+function saveSpaces() 
 { 
     //data é uma variavel para um array, e quer armazenar os dados na data (array) 
     var data = {}; 
@@ -68,7 +69,7 @@ function saveEspacos()
 
 
     //chamada fetch para envio dos dados para o servior via POST   
-    fetch('localhost:8080/Spaces/', 
+    fetch(server, 
     { 
         //cabecalho
         headers: 
@@ -102,7 +103,7 @@ function saveEspacos()
         { 
             document.getElementById("formuser").reset(); //limpeza dos dados do form 
             alert("submitted with success"); 
-            refreshEspacos(); 
+            refreshSpaces); 
         } 
     }).then(function (result) 
     {
@@ -117,24 +118,24 @@ function saveEspacos()
 
 
 
-function refreshEspacos() {
+function refreshSpaces() {
     async function fetchAsync() {
-    const renderEspacos = document.getElementById("result");
+    const renderSpaces = document.getElementById("result");
     let txt = "";
-    const response = await fetch('localhost:8080/Spaces/',);
-    const espacos = await response.json();
+    const response = await fetch(server,);
+    const spaces = await response.json();
     //criação de uma tabela para demonstração dos resultados recebidos
     txt += "<table class='table' style='padding:10px; width:70%; margin:0% 15% 0% 15%'>";
     txt += "<thead style='background-color:#607d8b; color:white '>";
     txt += "<tr><th>Name</th><th>Email</th><th>Reg. Date</th></tr></thead><tbody>";
     //percorrer a variável esapco e por cada espaco cria a linha da tabela com os dados presentes
-    for (const espaco of espacos) {
+    for (const space of spaces) {
     txt += "<tr><td style='text-align:right'>" + user.name + "</td><td>" + user.email + "</td><td>" +
     user.dateReg + "</td></tr>";
     }
     txt += "</tbody></table>";
     //envia a tabela construida para a view e mostra no object com ID result
-    renderEspacos.innerHTML = txt;
+    renderSpaces.innerHTML = txt;
     }
     //chama a função fetchAsync()
     fetchAsync().then(data => console.log("ok")).catch(reason => console.log(reason.message));

@@ -1,7 +1,8 @@
+const server = 'http://localhost:8080/managers/';
 window.onload = function () 
 {
     alert("pagina carregada com sucesso!!")
-    refreshGestores();
+    refreshManagers();
     validator();
     document.getElementById("formuser").onsubmit= function(e){
         //validaçao do formulario ao submeter
@@ -21,7 +22,7 @@ function validator()
             //se validar() for valido, res retorna true e executa o saveUsers
             if (res)
             {
-                saveGestores();
+                saveManagers();
             }
         },
             {
@@ -51,7 +52,7 @@ function validator()
 
 
 // funcao de gravaçao
-function saveGestores() 
+function saveManagers() 
 { 
     //data é uma variavel para um array, e quer armazenar os dados na data (array) 
     var data = {}; 
@@ -65,7 +66,7 @@ function saveGestores()
 
 
     //chamada fetch para envio dos dados para o servidor via POST   
-    fetch('http://localhost:8080/managers/', 
+    fetch(server, 
     { 
         //cabecalho
         headers: 
@@ -99,7 +100,7 @@ function saveGestores()
         { 
             document.getElementById("formuser").reset(); //limpeza dos dados do form 
             alert("submitted with success"); 
-            refreshEspacos(); 
+            refreshManagers(); 
         } 
     }).then(function (result) 
     {
@@ -114,12 +115,12 @@ function saveGestores()
 
 
 
-function refreshGestores() {
+function refreshManagers() {
     async function fetchAsync() {
-    const renderGestores = document.getElementById("result");
+    const renderManagers = document.getElementById("result");
     let txt = "";
-    const response = await fetch('http://localhost:8080/managers/',);
-    const gestores = await response.json();
+    const response = await fetch(server,);
+    const managers= await response.json();
     
 
     //criação de uma tabela para demonstração dos resultados recebidos
@@ -130,13 +131,13 @@ function refreshGestores() {
     
     //criação de uma tab
     //percorrer a variável gestor e por cada gestor cria a linha da tabela com os dados presentes
-    for (const gestor of gestores) {
+    for (const manager of managers) {
     txt += "<tr><td style='text-align:right'>" + user.name + "</td><td>" + user.email + "</td><td>" +
     user.dateReg + "</td></tr>";
     }
     txt += "</tbody></table>";
     //envia a tabela construida para a view e mostra no object com ID result
-    renderGestores.innerHTML = txt;
+    renderManagers.innerHTML = txt;
     }
     //chama a função fetchAsync()
     fetchAsync().then(data => console.log("ok")).catch(reason => console.log(reason.message));

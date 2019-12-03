@@ -1,7 +1,8 @@
+const server = 'http://localhost:8080/matchEvents/';
 window.onload = function () 
 {
     alert("pagina carregada com sucesso!!")
-    refreshEventos();
+    refreshEvents();
     validator();
     document.getElementById("formuser").onsubmit= function(e){
         //validaçao do formulario ao submeter
@@ -21,7 +22,7 @@ function validator()
             //se validar() for valido, res retorna true e executa o saveUsers
             if (res)
             {
-                saveEventos();
+                saveEvents();
             }
         },
             {
@@ -51,7 +52,7 @@ function validator()
 
 
 // funcao de gravaçao
-function saveEventos() 
+function saveEvents() 
 { 
     //data é uma variavel para um array, e quer armazenar os dados na data (array) 
     var data = {}; 
@@ -66,7 +67,7 @@ function saveEventos()
 
 
     //chamada fetch para envio dos dados para o servidor via POST   
-    fetch('localhost:8080/MatchEvents/', 
+    fetch(server, 
     { 
         //cabecalho
         headers: 
@@ -100,7 +101,7 @@ function saveEventos()
         { 
             document.getElementById("formuser").reset(); //limpeza dos dados do form 
             alert("submitted with success"); 
-            refreshEventos(); 
+            refreshEvents(); 
         } 
     }).then(function (result) 
     {
@@ -115,12 +116,12 @@ function saveEventos()
 
 
 
-function refreshEventos() {
+function refreshEvents() {
     async function fetchAsync() {
-    const renderEventos = document.getElementById("result");
+    const renderEvents = document.getElementById("result");
     let txt = "";
-    const response = await fetch('localhost:8080/MatchEvents/',);
-    const Eventos = await response.json();
+    const response = await fetch(server,);
+    const events = await response.json();
     
 
     //criação de uma tabela para demonstração dos resultados recebidos
@@ -131,13 +132,13 @@ function refreshEventos() {
     
     //criação de uma tab
     //percorrer a variável Eventos e por cada Evento cria a linha da tabela com os dados presentes
-    for (const Evento of Eventos) {
+    for (const event of events) {
     txt += "<tr><td style='text-align:right'>" + user.name + "</td><td>" + user.email + "</td><td>" +
     user.dateReg + "</td></tr>";
     }
     txt += "</tbody></table>";
     //envia a tabela construida para a view e mostra no object com ID result
-    renderEventos.innerHTML = txt;
+    renderEvents.innerHTML = txt;
     }
     //chama a função fetchAsync()
     fetchAsync().then(data => console.log("ok")).catch(reason => console.log(reason.message));

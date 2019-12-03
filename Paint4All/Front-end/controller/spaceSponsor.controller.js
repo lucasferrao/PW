@@ -1,7 +1,8 @@
+const server = 'http://localhost:8080/spaceSponsors/';
 window.onload = function () 
 {
     alert("pagina carregada com sucesso!!")
-    refreshEspacoPatrocinador();
+    refreshSpaceSponsors();
     validator();
     document.getElementById("formuser").onsubmit= function(e){
         //validaçao do formulario ao submeter
@@ -21,7 +22,7 @@ function validator()
             //se validar() for valido, res retorna true e executa o saveUsers
             if (res)
             {
-                saveEspacoPatrocinador();
+                saveSpaceSponsors();
             }
         },
             {
@@ -49,7 +50,7 @@ function validator()
 
 
 // funcao de gravaçao
-function saveEspacoPatrocinador() 
+function saveSpaceSponsors() 
 { 
     //data é uma variavel para um array, e quer armazenar os dados na data (array) 
     var data = {}; 
@@ -64,7 +65,7 @@ function saveEspacoPatrocinador()
 
 
     //chamada fetch para envio dos dados para o servior via POST   
-    fetch('localhost:8080/SpaceSponsers/', 
+    fetch(server, 
     { 
         //cabecalho
         headers: 
@@ -98,7 +99,7 @@ function saveEspacoPatrocinador()
         { 
             document.getElementById("formuser").reset(); //limpeza dos dados do form 
             alert("submitted with success"); 
-            refreshEspacoPatrocinadores(); 
+            refreshSpaceSponsors(); 
         } 
     }).then(function (result) 
     {
@@ -113,24 +114,24 @@ function saveEspacoPatrocinador()
 
 
 
-function refreshEspacoPatrocinadores() {
+function refreshSpaceSponsors() {
     async function fetchAsync() {
-    const renderEspacoPatrocinadores = document.getElementById("result");
+    const renderSpaceSponsors = document.getElementById("result");
     let txt = "";
-    const response = await fetch('localhost:8080/SpaceSponsers/',);
-    const EspacoPatrocinadores = await response.json();
+    const response = await fetch(server,);
+    const spaceSponsors = await response.json();
     //criação de uma tabela para demonstração dos resultados recebidos
     txt += "<table class='table' style='padding:10px; width:70%; margin:0% 15% 0% 15%'>";
     txt += "<thead style='background-color:#607d8b; color:white '>";
     txt += "<tr><th>Name</th><th>Email</th><th>Reg. Date</th></tr></thead><tbody>";
     //percorrer a variável EspacoPatrocinador e por EspacoPatrocinadores cria a linha da tabela com os dados presentes
-    for (const EspacoPatrocinador of EspacoPatrocinadores) {
+    for (const spaceSponsor of spaceSponsors) {
     txt += "<tr><td style='text-align:right'>" + user.name + "</td><td>" + user.email + "</td><td>" +
     user.dateReg + "</td></tr>";
     }
     txt += "</tbody></table>";
     //envia a tabela construida para a view e mostra no object com ID result
-    renderEspacoPatrocinadores.innerHTML = txt;
+    renderSpaceSponsors.innerHTML = txt;
     }
     //chama a função fetchAsync()
     fetchAsync().then(data => console.log("ok")).catch(reason => console.log(reason.message));
