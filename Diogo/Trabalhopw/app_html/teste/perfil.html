@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="img/1.9.png"/>
+<link href="css/css.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="navbar">
+ <a><img class="menu" onclick="menuNav()" src="https://img.icons8.com/android/24/000000/menu.png"></a>
+ <a href="criarAtividade.html"><img class="atividade" src="https://img.icons8.com/android/24/000000/plus.png"></a>
+ <a href="ranking.html"><img class="estatisticas" src="https://img.icons8.com/material-outlined/24/000000/statistic-document.png"></a href="ranking.html">
+ <a><img class="notificação" src="https://img.icons8.com/material-outlined/24/000000/appointment-reminders.png"></a>
+ <a href="perfil.html"><img  class="perfil" src="https://img.icons8.com/windows/32/000000/user.png"></a>
+</div>
+
+
+
+  <div class="topnav">
+    <img class="icon" src="img/1.9.png" style="width:70px;height:70px;" >
+    <a class="title" href="index.html" >Paint4All</a>
+    
+  </div>
+  
+  
+   
+  </div>
+  
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      
+      <a href="historico.html">Minhas Atividades</a>
+      <a href="criarEquipa.html">Criar Equipa</a>
+      <a href="alterarDados.html">Alterar Dados</a>
+      <a href="notificações.html">Notificações</a>
+    </div>
+  </div>
+  
+  
+  <script>
+  function menuNav() {
+    document.getElementById("myNav").style.width = "70%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
+
+  <!-- Add icon library -->
+  <br>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="card">
+  <img class="mx-auto rounded-circle " src="img/user.png" style="width:70%" alt="">
+  <h2>Ana Gomes</h2>
+  <p class="title">anagomes1234@gmail.com</p>
+  <p>Braga</p>
+  
+  <a href="#"><i class="fa fa-twitter" ></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <a href="#"><i class="fa fa-facebook" ></i></a>
+  <table>
+  <tr><button>Contact</button></tr>
+  <tr><a href="login.html"><button>Sair</button></tr></a>
+  </table>
+</div>
+  
+
+
+</body>

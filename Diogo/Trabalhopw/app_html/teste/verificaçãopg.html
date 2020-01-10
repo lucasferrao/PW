@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="img/1.9.png"/>
+<link href="css/css.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="navbar">
+ <a><img class="menu" onclick="menuNav()" src="https://img.icons8.com/android/24/000000/menu.png"></a>
+ <a href="criarAtividade.html"><img class="atividade" src="https://img.icons8.com/android/24/000000/plus.png"></a>
+ <a href="ranking.html"><img class="estatisticas" src="https://img.icons8.com/material-outlined/24/000000/statistic-document.png"></a href="ranking.html">
+ <a><img class="notificação" src="https://img.icons8.com/material-outlined/24/000000/appointment-reminders.png"></a>
+ <a href="perfil.html"><img  class="perfil" src="https://img.icons8.com/windows/32/000000/user.png"></a>
+</div>
+
+
+
+  <div class="topnav">
+    <img class="icon" src="img/1.9.png" style="width:70px;height:70px;" >
+    <a class="title" href="index.html" >Paint4All</a>
+    
+  </div>
+  
+  
+   
+  </div>
+  
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      
+      <a href="historico.html">Minhas Atividades</a>
+      <a href="criarEquipa.html">Criar Equipa</a>
+      <a href="alterarDados.html">Alterar Dados</a>
+      <a href="notificações.html">Notificações</a>
+    </div>
+  </div>
+  
+  
+  <script>
+  function menuNav() {
+    document.getElementById("myNav").style.width = "70%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
+<div class="card">
+
+    <!-- Page Heading -->
+    <h3 class="h3 mb-2 text-gray-800 text-center">As minhas reservas</h3>
+
+    
+   
+      <div class="card1">
+        <div class="col s12 m7">
+    
+          <div class="card horizontal">
+            
+              <img src="img/images123.jpg" class="fadeIn" width="40%">
+         
+            <div class="card-stacked">
+              <div class="card-content">
+               <p>10/01/2020</p>
+               <p>Nº do pedido: PB45264</p>
+               <p>Espaço: ExtremePaint</p>
+               <p>Valor: 30,00€</p>
+               <p>Estado: <div class="pago">Pago</p></div>
+               
+              </div>
+             
+            </div>
+          </div>
+        </div>
+    
+   </div>
+<br>
+          
+    <div class="card1">
+      <div class="container">
+        <div class="col s12 m7">
+    
+          <div class="card horizontal">
+            
+              <img src="img/equipa1.jpg" class="fadeIn" width="40%">
+         
+            <div class="card-stacked">
+              <div class="card-content">
+               <p>22/01/2020</p>
+               <p>Nº do pedido: PB45447</p>
+               <p>Espaço: ExtremePaint</p>
+               <p>Valor: 30,00€</p>
+               <p>Estado: <div class="emEspera">Em espera</p></div>
+               
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+
+<br>
+</body>
+</html>

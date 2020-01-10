@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="img/1.9.png"/>
+<link href="css/css.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="navbar">
+ <a><img class="menu" onclick="menuNav()" src="https://img.icons8.com/android/24/000000/menu.png"></a>
+ <a href="criarAtividade.html"><img class="atividade" src="https://img.icons8.com/android/24/000000/plus.png"></a>
+ <a href="ranking.html"><img class="estatisticas" src="https://img.icons8.com/material-outlined/24/000000/statistic-document.png"></a href="ranking.html">
+ <a><img class="notificação" src="https://img.icons8.com/material-outlined/24/000000/appointment-reminders.png"></a>
+ <a href="perfil.html"><img  class="perfil" src="https://img.icons8.com/windows/32/000000/user.png"></a>
+</div>
+
+
+
+  <div class="topnav">
+    <img class="icon" src="img/1.9.png" style="width:70px;height:70px;" >
+    <a class="title" href="index.html" >Paint4All</a>
+    
+  </div>
+  
+  
+   
+  </div>
+  
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      
+      <a href="historico.html">Minhas Atividades</a>
+      <a href="criarEquipa.html">Criar Equipa</a>
+      <a href="alterarDados.html">Alterar Dados</a>
+      <a href="notificações.html">Notificações</a>
+    </div>
+  </div>
+  
+  
+  <script>
+  function menuNav() {
+    document.getElementById("myNav").style.width = "70%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
+<div class="card">
+<div>
+    <h1 class="mb-3 text-gray-900" style="padding-left: 1rem;">Detalhes Atividade</h1>
+</div> <h3>Equipa Adversária</h3>
+  
+  <div class="col-1" style="margin-left: 2px; margin-bottom: 20px;">
+    <table class="table table-bordered text-center">
+      <thead>
+        <tr role="row">
+          <th style="width: 90px;">Espaço</th>
+          <th style="width: 150px;">Data</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="row">
+          <td>Iva pereira</td>
+          <td>ivauhfkja@hotmail.com</td>
+        </tr>
+        <tr>
+            <td>angela</td>
+            <td>angela.nsicjwdi@gmail.com</td>
+        </tr>
+        <tr>
+            <td>João pedrp</td>
+            <td>jpihfiekcg@gmail.com</td>
+        </tr>
+        
+      </tbody>
+    </table>
+    <h3>Espaço escolhido: <a> Extreme Paint</a></h3> 
+      
+   
+     
+    <h3>Data da Partida: <a>12/10/2018     </a></h3> 
+    
+     <br><br>
+    <div class="card">
+    
+        <a href="index.html" class="btn btn-primary1 btn-user btn-block text-center float">Voltar</a>
+        
+      </div>
+  </div>
+  </div>
+
+
+
+</body>

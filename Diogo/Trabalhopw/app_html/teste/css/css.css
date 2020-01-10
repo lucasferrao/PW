@@ -1,0 +1,728 @@
+ .card {
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 20px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    
+  }
+  
+  button1 {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: black;
+    background-color: #c6d9af;
+    text-align: center;
+    cursor: pointer;
+    width: 200%;
+    font-size: 18px;
+    border-color: #000000;
+    border-radius: 10rem;
+    border-width: 1px;
+    border-style: solid;
+    
+  }
+
+  .float{
+    float: right;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+  .text-center {
+    text-align: center !important;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color: #c6d8af;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 2px 23.2px;
+    text-decoration: none;
+    font-size: 10px;
+  }
+  
+  .navbar a:hover {
+    background: #02360d;
+    color: black;
+  }
+  
+  
+  
+  .main {
+    padding: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .topnav {
+      overflow: hidden;
+      background-color: #c6d8af;
+      position: relative;
+    }
+    
+  .topnav a {
+      float: left;
+      color: #36602c;
+      text-align: center;
+      padding: 18px 70px;
+      font-size: 30px;
+      font-weight: bold;
+      
+    }
+    
+    .icon{
+      float: left;
+      padding-left: 5px;
+      padding-top: 3px;
+    }
+
+    
+    
+    .inicio{
+      background-color: #c6d8af;
+      padding-left: 50px;
+      padding-right: 40px;
+      padding-bottom: 200px;
+      padding-top: 180px;
+      
+    }
+   
+form {
+  
+  background-color: #c6d8af;
+}
+form1 {
+  
+  background-color: #ffffff;
+}
+
+
+
+.menu{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.atividade{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.perfil{
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.estatisticas{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.notificação{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #000000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #c6d8af;
+  display: block;
+  transition: 0.3s;
+  
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  right: 1px;
+  font-size: 40px;
+}
+
+* {box-sizing: border-box}
+body {font-family: roboto; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 20px;
+  padding: 40px 12px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.text1 {
+  color: #000000;
+  font-size: 19px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 12px;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+.date
+{
+  width: 100%;
+  padding: 2.5%;
+}
+  .title {
+    color: grey;
+    font-size: 20px;
+  }
+  
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+  .text-center {
+    text-align: center !important;
+  }
+
+ 
+   
+form {
+  
+  background-color: #c6d8af;
+}
+
+
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #000000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.criar{
+  font-size: small;
+  
+}
+
+
+
+.table {
+  border-radius: 5px 5px 5px 5px;
+  margin: 25px 0;
+  min-width: 200px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  table-layout: fixed;
+  overflow: hidden;
+}
+
+th {
+  background-color: #c6d8af !important;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: inherit;
+  display: table-cell;
+  height: 2.5rem;
+  padding-left: 0.5rem;
+  overflow: hidden;
+}
+
+.button {
+  background-color: #c6d8af;
+  border: 1px solid black;
+  color: w#c6d8af;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  display: block;
+  border-radius: 25px;
+  padding: 8px !important; 
+  width: 130px;
+  margin-left: 12px;    
+}
+
+.button2M {
+  background-color: #c6d8af;
+  border: 1px solid black;
+  color: w#c6d8af;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  display: block;
+  border-radius: 25px;
+  padding: 8px !important; 
+  width: 170px;
+  margin-left: 12px;    
+}
+
+.center {
+  position: relative;
+  padding-right: 6rem;
+  padding-left: 6rem;
+}
+
+.btn1 {
+  display: inline-block;
+  font-weight: 400;
+  color: #c6d8af;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.35rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  color: rgb(133, 135, 150);
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
+  padding: 0.375rem 0.75rem;
+  border-radius: 10rem;
+  transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+form.user .btn-user {
+  font-size: 0.8rem;
+  border-radius: 10rem;
+  padding: 0rem 1rem;
+}
+
+.btn-primary {
+  color: #000000;
+  background-color: #c6d8af;
+  border-color: #000000;
+  width: 150px;
+  display: block;
+}
+
+.btn-primary1 {
+  color: #000000;
+  background-color: #c6d8af;
+  border-color: #000000;
+  width: 180px;
+  display: block;
+}
+
+.btn-primary2 {
+  color: #000000;
+  background-color: #c6d8af;
+  border-color: #000000;
+  width: 150px;
+  
+}
+
+.btn-primary3 {
+  color: #000000;
+  background-color: #c6d8af;
+  border-color: #000000;
+  width: 250px;
+  
+}
+.btn-primary4 {
+  color: #000000;
+  background-color: #c6d8af;
+  border-color: #000000;
+  width: 70px;
+  display: block;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.emEspera{
+  color: red;
+}
+
+.pago{
+  color: #36620c;
+}
+
+.mb-2,
+.my-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.toggle {
+  margin-bottom: 40px;
+}
+
+.toggle > input {
+  display: none;
+}
+
+.toggle > label {
+  position: relative;
+  float: right;
+  display: block;
+  height: 28px;
+  width: 52px;
+  background-color: #f7f7f7;
+  border: 1px #a2e3e6 solid;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle > label:after {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 100px;
+  background: #fff;
+  box-shadow: 0px 3px 3px rgba(0,0,0,0.05);
+  content: '';
+  transition: all 0.3s ease;
+}
+.toggle > label:active:after {
+  transform: scale(1.15, 0.85);
+}
+.toggle > input:checked ~ label {
+  background-color: #36602C;
+  border-color: #4cda64;
+}
+.toggle > input:checked ~ label:after {
+  left: 25px;
+}
+.toggle > input:disabled ~ label {
+  background-color: #d5d5d5;
+  pointer-events: none;
+}
+.toggle > input:disabled ~ label:after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.mb-2,
+.my-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.form-group{
+  position: relative;
+}
+
+
+
+
+
+
+/* Pagination links */
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}

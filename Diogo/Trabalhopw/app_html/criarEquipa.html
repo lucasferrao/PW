@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="img/1.9.png"/>
+<link href="css/css.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="navbar">
+ <a><img class="menu" onclick="menuNav()" src="https://img.icons8.com/android/24/000000/menu.png"></a>
+ <a href="criarAtividade.html"><img class="atividade" src="https://img.icons8.com/android/24/000000/plus.png"></a>
+ <a href="ranking.html"><img class="estatisticas" src="https://img.icons8.com/material-outlined/24/000000/statistic-document.png"></a href="ranking.html">
+ <a><img class="notificação" src="https://img.icons8.com/material-outlined/24/000000/appointment-reminders.png"></a>
+ <a href="perfil.html"><img  class="perfil" src="https://img.icons8.com/windows/32/000000/user.png"></a>
+</div>
+
+
+
+  <div class="topnav">
+    <img class="icon" src="img/1.9.png" style="width:70px;height:70px;" >
+    <a class="title" href="index.html" >Paint4All</a>
+    
+  </div>
+  
+  
+   
+  </div>
+  
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      
+      <a href="historico.html">Minhas Atividades</a>
+      <a href="criarEquipa.html">Criar Equipa</a>
+      <a href="alterarDados.html">Alterar Dados</a>
+      <a href="notificações.html">Notificações</a>
+    </div>
+  </div>
+  
+  <script>
+  function menuNav() {
+    document.getElementById("myNav").style.width = "70%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
+<br>
+<table id="tabela1" class="display">
+  <thead>
+      <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Row 1 Data 1</td>
+          <td>Row 1 Data 2</td>
+      </tr>
+      <tr>
+          <td>Row 2 Data 1</td>
+          <td>Row 2 Data 2</td>
+      </tr>
+  </tbody>
+</table>
+    <div class="card">
+        <a href="convites.html" class="btn btn-primary4 btn-user btn-block text-center float">+</a>
+               <br><br><br>
+        </div>
+  <div class="card">
+    <a href="convites.html" class="btn btn-primary btn-user btn-block text-center float">Convidar</a>
+           <br><br><br>
+    </div>
+    <div class="card">
+        <a href="criarAtividade.html" class="btn btn-primary btn-user btn-block text-center float">Criar Atividade</a>
+    </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/js-form-validator.js"></script>
+  <script type="text/javascript" src="./controller/user.controller.js"></script>
+  </body>

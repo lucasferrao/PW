@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="img/1.9.png"/>
+<link href="css/css.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="navbar">
+ <a><img class="menu" onclick="menuNav()" src="https://img.icons8.com/android/24/000000/menu.png"></a>
+ <a href="criarAtividade.html"><img class="atividade" src="https://img.icons8.com/android/24/000000/plus.png"></a>
+ <a href="ranking.html"><img class="estatisticas" src="https://img.icons8.com/material-outlined/24/000000/statistic-document.png"></a href="ranking.html">
+ <a><img class="notificação" src="https://img.icons8.com/material-outlined/24/000000/appointment-reminders.png"></a>
+ <a href="perfil.html"><img  class="perfil" src="https://img.icons8.com/windows/32/000000/user.png"></a>
+</div>
+
+
+
+  <div class="topnav">
+    <img class="icon" src="img/1.9.png" style="width:70px;height:70px;" >
+    <a class="title" href="index.html" >Paint4All</a>
+    
+  </div>
+  
+  
+   
+  </div>
+  
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      
+      <a href="historico.html">Minhas Atividades</a>
+      <a href="criarEquipa.html">Criar Equipa</a>
+      <a href="alterarDados.html">Alterar Dados</a>
+      <a href="notificações.html">Notificações</a>
+    </div>
+  </div>
+  
+  
+  <script>
+  function menuNav() {
+    document.getElementById("myNav").style.width = "70%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
+
+  
+
+
+<!-- Begin Page Content -->
+<div class="container-fluid">
+ <div class="card-body">
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800 text-center">Ranking</h1>
+  <p class="mb-4 text-center">Apresentamos o Ranking das Partidas! Verifique em que lugar se encontra!</a></p>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+  
+   
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Cidade</th>
+              <th>Idade</th>
+              <th>Número da Partida</th>
+              <th>Pontos</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Nome</th>
+              <th>Cidade</th>
+              <th>Idade</th>
+              <th>Número da Partida</th>
+              <th>Pontos</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <tr>
+              <td>João Ribeiro</td>
+              <td>Lisboa</td>
+              <td>25</td>
+              <td>5</td>
+              <td>325</td>
+            </tr>
+            <tr>
+              <td>Ana Monteiro</td>
+              <td>Évora</td>
+              <td>28</td>
+              <td>6</td>
+              <td>275</td>
+            </tr>
+            <tr>
+              <td>Carolina Pereira</td>
+              <td>Covilhã</td>
+              <td>21</td>
+              <td>6</td>
+              <td>421</td>
+            </tr>
+            <tr>
+              <td>Rodrigo Moreira</td>
+              <td>Braga</td>
+              <td>23</td>
+              <td>4</td>
+              <td>356</td>
+            </tr>
+            <tr>
+              <td>Ângelo Bastos</td>
+              <td>Maia</td>
+              <td>33</td>
+              <td>10</td>
+              <td>405</td>
+            </tr>
+            <tr>
+              <td>Tomás Gomes</td>
+              <td>Porto</td>
+              <td>21</td>
+              <td>3</td>
+              <td>301</td>
+            </tr>
+            <tr>
+              <td>Henrique Soares</td>
+              <td>Bragança</td>
+              <td>29</td>
+              <td>4</td>
+              <td>266</td>
+            </tr>
+            <tr>
+              <td>Rafaela Cunha</td>
+              <td>Braga</td>
+              <td>22</td>
+              <td>8</td>
+              <td>327</td>
+            </tr>
+            <tr>
+              <td>Carlota Poço</td>
+              <td>Guimarães</td>
+              <td>35</td>
+              <td>5</td>
+              <td>267</td>
+            </tr>
+            <tr>
+              <td>Sonia Fernandes</td>
+              <td>Coimbra</td>
+              <td>23</td>
+              <td>1</td>
+              <td>103</td>
+            </tr>
+            <tr>
+              <td>Joana Gines</td>
+              <td>Aveiro</td>
+              <td>30</td>
+              <td>15</td>
+              <td>811</td>
+            </tr>
+            <tr>
+              <td>Joaquim Santos</td>
+              <td>Bragança</td>
+              <td>22</td>
+              <td>9</td>
+              <td>342</td>
+            </tr>
+            <tr>
+              <td>Carlos Semelhel</td>
+              <td>Braga</td>
+              <td>36</td>
+              <td>5</td>
+              <td>476</td>
+            </tr>
+            <tr>
+              <td>Dylan Soares</td>
+              <td>Leiria</td>
+              <td>24</td>
+              <td>6</td>
+              <td>513</td>
+            </tr>
+            <tr>
+              <td>Tatiana Ferreira</td>
+              <td>Chaves</td>
+              <td>19</td>
+              <td>1</td>
+              <td>258</td>
+            </tr>
+            <tr>
+              <td>Michael Silva</td>
+              <td>Viseu</td>
+              <td>31</td>
+              <td>7</td>
+              <td>598</td>
+            </tr>
+            <tr>
+              <td>Paulo Bernardo</td>
+              <td>Portimão</td>
+              <td>27</td>
+              <td>9</td>
+              <td>725</td>
+            </tr>
+            <tr>
+              <td>Gloria Dias</td>
+              <td>Beja</td>
+              <td>39</td>
+              <td>4</td>
+              <td>237</td>
+            </tr>
+            <tr>
+              <td>Bruno Sampaio</td>
+              <td>Seixal</td>
+              <td>41</td>
+              <td>3</td>
+              <td>456</td>
+            </tr>
+            <tr>
+              <td>Daniel Rios</td>
+              <td>Viana do Castelo</td>
+              <td>35</td>
+              <td>6</td>
+              <td>517</td>
+            </tr>
+            <tr>
+              <td>Jennifer Caldas</td>
+              <td>Nazaré</td>
+              <td>30</td>
+              <td>2</td>
+              <td>345</td>
+            </tr>
+            <tr>
+              <td>Bernardo Oliveira</td>
+              <td>Braga</td>
+              <td>46</td>
+              <td>4</td>
+              <td>675</td>
+            </tr>
+            <tr>
+              <td>Cesar Barbosa</td>
+              <td>Guimarães</td>
+              <td>29</td>
+              <td>5</td>
+              <td>450</td>
+            </tr>
+            <tr>
+              <td>Isabel Gomes</td>
+              <td>Braga</td>
+              <td>29</td>
+              <td>5</td>
+              <td>600</td>
+            </tr>
+            <tr>
+              <td>Maria Joao Reis</td>
+              <td>Braga</td>
+              <td>15</td>
+              <td>1</td>
+              <td>279</td>
+            </tr>
+            <tr>
+              <td>Luisa Reis</td>
+              <td>Braga</td>
+              <td>17</td>
+              <td>2</td>
+              <td>375</td>
+            </tr>
+            <tr>
+              <td>Carolina Reis</td>
+              <td>Braga</td>
+              <td>16</td>
+              <td>1</td>
+              <td>275</td>
+            </tr>
+            <tr>
+              <td>Vasco Gomes</td>
+              <td>Braga</td>
+              <td>23</td>
+              <td>7</td>
+              <td>899</td>
+            </tr>
+            <tr>
+              <td>Duarte Barbosa</td>
+              <td>Braga</td>
+              <td>18</td>
+              <td>5</td>
+              <td>622</td>
+            </tr>
+            <tr>
+              <td>Mariana Gomes</td>
+              <td>Braga</td>
+              <td>20</td>
+              <td>4</td>
+              <td>610</td>
+            </tr>
+            <tr>
+              <td>Manuel Gomes</td>
+              <td>Braga</td>
+              <td>57</td>
+              <td>3</td>
+              <td>611</td>
+            </tr>
+            <tr>
+              <td>Anabela Guimarães</td>
+              <td>Braga</td>
+              <td>52</td>
+              <td>2</td>
+              <td>375</td>
+            </tr>
+            <tr>
+              <td>Paula Pinhas</td>
+              <td>Faro</td>
+              <td>27</td>
+              <td>7</td>
+              <td>555</td>
+            </tr>
+            <tr>
+              <td>Bruna Loureiro</td>
+              <td>Castelo Branco</td>
+              <td>21</td>
+              <td>1</td>
+              <td>122</td>
+            </tr>
+            <tr>
+              <td>Miguel Henrique</td>
+              <td>Lamego</td>
+              <td>24</td>
+              <td>9</td>
+              <td>1102</td>
+            </tr>
+            <tr>
+              <td>Rita Ribeiro</td>
+              <td>Guimarães</td>
+              <td>21</td>
+              <td>3</td>
+              <td>245</td>
+            </tr>
+            <tr>
+              <td>Pedro Lima</td>
+              <td>Famalicão</td>
+              <td>19</td>
+              <td>6</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <td>Rosa Oliveira</td>
+              <td>Sintra</td>
+              <td>41</td>
+              <td>3</td>
+              <td>350</td>
+            </tr>
+            <tr>
+              <td>Viviana Harrell</td>
+              <td>Portimão</td>
+              <td>26</td>
+              <td>1</td>
+              <td>99</td>
+            </tr>
+            <tr>
+              <td>Célia Barbosa</td>
+              <td>Braga</td>
+              <td>37</td>
+              <td>2</td>
+              <td>200</td>
+            </tr>
+            <tr>
+              <td>Joao Martins</td>
+              <td>Braga</td>
+              <td>35</td>
+              <td>6</td>
+              <td>645</td>
+            </tr>
+            <tr>
+              <td>Olivia Pereira</td>
+              <td>Porto</td>
+              <td>39</td>
+              <td>2</td>
+              <td>234</td>
+            </tr>
+            <tr>
+              <td>Bruno Nogueira</td>
+              <td>Lisboa</td>
+              <td>38</td>
+              <td>3</td>
+              <td>501</td>
+            </tr>
+            <tr>
+              <td>Samanta Silva</td>
+              <td>Almada</td>
+              <td>37</td>
+              <td>9</td>
+              <td>1395</td>
+            </tr>
+            <tr>
+              <td>Tiago Loureiro</td>
+              <td>Lagos</td>
+              <td>22</td>
+              <td>4</td>
+              <td>540</td>
+            </tr>
+     
+           
+            </tr>
+          </tbody>
+        </table>
+     
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+
+</body>
+  
